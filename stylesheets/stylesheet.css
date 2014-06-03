@@ -139,7 +139,7 @@ strong {
   text-align: center;
   border: none;
   position: relative;
-  max-width: 720px;
+  max-width: 640px;
   padding: 5px;
   margin: 15px 10px 10px 30px;
 
@@ -150,11 +150,6 @@ strong {
   -ms-box-shadow: 0 0 5px #ebebeb;
 
 }
-
-/*
-#idImgHead {
-}
-*/
 
 pre, code {
   width: 100%;
@@ -258,6 +253,11 @@ form {
   border-radius: 0px;
 }
 
+.youtube-player {
+  width: 640px;
+  height: 480px;
+}
+
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
@@ -297,7 +297,7 @@ Full-Width Styles
   background: linear-gradient(top, #292929, #000000);
 }
 
-.row {
+#idDivHead {
   background: #292929;
   background: -moz-linear-gradient(top, #292929, #000000);
   background: -webkit-linear-gradient(top, #292929, #000000);
