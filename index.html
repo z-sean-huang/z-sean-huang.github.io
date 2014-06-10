@@ -6,6 +6,8 @@
     <meta name="description" content="z-sean-huang.github.io" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap-image-gallery.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>z.sean.huang's I/O</title>
@@ -75,26 +77,42 @@
     <!-- MAIN CONTENT -->
     <div class="container">
         <div class="row">
-        <div class="col-md-offset-2 col-md-7 col-sm-12">
-        <h3>
-            Graduate Research: Design and Implementation of FPGA based Embedded Visual Servo System
-        </h3>
-        <img src="images/p1.jpg" class="img-rounded" width="640">
-        <img src="images/p2.jpg" class="img-rounded" width="640">
+            <div class="col-md-offset-2 col-md-7 col-sm-12">
+                <h3>
+                    Graduate Research: Design and Implementation of FPGA based Embedded Visual Servo System
+                </h3>
+                <img src="images/p1.jpg" width="640">
+                <img src="images/p2.jpg" width="640">
 
-        <p>My graduate research is real-time scheduling of embedded system, which is based on a FPGA development board. In this face-tracking system, there are four tasks (processes):<br><br>
-        (1.) One task to execute the image processing and locate the human face.<br>
-        (2.) Two tasks to control the angle of DC-motor, both horizontally and vertically.<br>
-        (3.) One task to record the related signal, such as motor's angle, speed, current and voltage.<br><br>
-        In the field of control theory, there always has trade-off if system's computer power is limited. The purpose of this research is to plan an proper and compromised schedule, make sure all the tasks in the computer system work real-time and functionally.<br>
-        <br>
-        Here is a simple demo of my experiment!</p>
-        <br>
-        <iframe class="youtube-player" type="text/html" width="640" src="http://www.youtube.com/embed/urRajaj6YVw" frameborder="0"> </iframe>
-        <br><br>
-        <iframe class="youtube-player" type="text/html" width="640" src="http://www.youtube.com/embed/gLxTyJu_DmI" frameborder="0"> </iframe>
-        </div>
+                <p>My graduate research is real-time scheduling of embedded system, which is based on a FPGA development board. In this face-tracking system, there are four tasks (processes):<br><br>
+                (1.) One task to execute the image processing and locate the human face.<br>
+                (2.) Two tasks to control the angle of DC-motor, both horizontally and vertically.<br>
+                (3.) One task to record the related signal, such as motor's angle, speed, current and voltage.<br><br>
+                In the field of control theory, there always has trade-off if system's computer power is limited. The purpose of this research is to plan an proper and compromised schedule, make sure all the tasks in the computer system work real-time and functionally.<br>
+                <br>
+                Here is a simple demo of my experiment!</p>
+                <br>
+                <iframe class="youtube-player" type="text/html" width="640" src="http://www.youtube.com/embed/urRajaj6YVw" frameborder="0"> </iframe>
+                <br><br>
+                <iframe class="youtube-player" type="text/html" width="640" src="http://www.youtube.com/embed/gLxTyJu_DmI" frameborder="0"> </iframe>
+                <br>
+                <br>
+                <!--TODO-->
+                <div id="links">
+                    <a href="images/s1.jpg" title="system block" data-gallery><img src="images/s1.jpg" alt="s1" height="130"></a>
+                    <a href="images/s2.jpg" title="logic block" data-gallery><img src="images/s2.jpg" alt="s2" height="130"></a>
+                    <a href="images/c1.jpg" title="circuit" data-gallery><img src="images/c1.jpg" alt="c1" height="130"></a>
+                    <a href="images/c2.jpg" title="PCB layout" data-gallery><img src="images/c2.jpg" alt="c2" height="130"></a>
+                    <a href="images/s3.jpg" title="control block" data-gallery><img src="images/s3.jpg" alt="s3" height="130"></a>
+                    <a href="images/m1.jpg" title="sketch" data-gallery><img src="images/m1.jpg" alt="m1" height="130"></a>
+                    <a href="images/m2.jpg" title="mechnism" data-gallery><img src="images/m2.jpg" alt="m2" height="130"></a>
+                    <a href="images/r1.jpg" title="response h" data-gallery><img src="images/r1.jpg" alt="r1" height="130"></a>
+                    <a href="images/r2.jpg" title="response v" data-gallery><img src="images/r2.jpg" alt="r2" height="130"></a>
+                </div>
+                <!--TODO-->
+            </div>
         </div> <!-- END row -->
+
     </div> <!-- END container -->
 
     <!-- FOOTER  -->
@@ -126,9 +144,48 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">?</a>
+        <a class="next">?</a>
+        <a class="close">กั</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Bootstrap Image Gallery lightbox -->
+    
+
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="javascripts/gibberish-aes-1.0.0.min.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="javascripts/bootstrap-image-gallery.min.js"></script>
     <script>
         fnInit = function () {
             $("a").tooltip();
