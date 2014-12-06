@@ -198,15 +198,19 @@
             });
             */
             $("#idThesis").click(function () {
-                window.open("https://www.dropbox.com/s/m60xwi8v7jzs8e1/%E5%9F%BA%E6%96%BCFPGA%E7%9A%84%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%A6%96%E8%A6%BA%E4%BC%BA%E6%9C%8D%E7%B3%BB%E7%B5%B1%E4%B9%8B%E8%A8%AD%E8%A8%88%E8%88%87%E5%AF%A6%E7%8F%BE.pdf", "resume");
+                //window.open("https://www.dropbox.com/s/m60xwi8v7jzs8e1/%E5%9F%BA%E6%96%BCFPGA%E7%9A%84%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%A6%96%E8%A6%BA%E4%BC%BA%E6%9C%8D%E7%B3%BB%E7%B5%B1%E4%B9%8B%E8%A8%AD%E8%A8%88%E8%88%87%E5%AF%A6%E7%8F%BE.pdf", "resume");
+                $("#idModal").modal("show")
             });
 
             $("#idModalBtnOk").click(function () {
-                var sEncryUrl = "U2FsdGVkX185lkgiHKonR1Bbq4m7w3ZJomQaS/mMEm92oSRtooKMgI7a6Q2QHAWjaF0YSYI9s5ATrFW/1Q8NaYQe1hwTbSWbJDYCum7kaL8IwHENZhzJNW1xeJVKjQ8p";
+                //var sEncryUrl = "U2FsdGVkX185lkgiHKonR1Bbq4m7w3ZJomQaS/mMEm92oSRtooKMgI7a6Q2QHAWjaF0YSYI9s5ATrFW/1Q8NaYQe1hwTbSWbJDYCum7kaL8IwHENZhzJNW1xeJVKjQ8p";
+                var sEncryUrl = "U2FsdGVkX198nmm0MZsUubz7JgKfZzu4rw5xVOQxHc1h8ArOCYzVahBb2SaSAZJHKnJNZkNjDKKyLVnrjZfC7rJ5wZ5tgH4WfJqtOLFFyyo9kEy+mH/lRUdEk9UL6Z9QwtB/JGCqtudffYda/jYC75ctyVUv0mlp6faoLcjqRm36QtAWuJgrrV99RbjSIvsGyMPzPJqfRYo2NQ2uPfMQ+wyrXlDxxBg1W0cLlLMIrn7mJWDjsqZHX3NsYJ8lSdr74Avzj+Ffd2mVwvFvDEvcgnjS4eWiNXwa3ZqXh6MI8eROugF9jE23/dgmewVx5hC/"
+
                 try {
                     var sUrl = GibberishAES.dec(sEncryUrl, $("#idTextName").val());
                     $("#idModal").modal("hide");
-                    window.open(sUrl, "resume");
+                    //window.open(sUrl, "resume");
+                    window.open(sUrl, "thesis");
                     } catch (e) {
                     $("#idTextName").attr("placeholder", "sorry, please try again!")
                     $("#idTextName").val("")
