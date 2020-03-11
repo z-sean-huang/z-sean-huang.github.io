@@ -71,7 +71,7 @@
             </div>
             <div class="col-lg-8 col-md-9 col-sm-8 col-xs-7">
                 <h1 id="project_title">z.sean.huang's I/O</h1>
-                <h2 id="project_tagline">hello, world! Just want to share my passion and technical experience.</h2>
+                <h2 id="project_tagline">Hello World!</h2>
             </div>
         </div>
     </div>
@@ -203,8 +203,9 @@
             });
 
             $("#idModalBtnOk").click(function () {
-                //var sEncryUrl = "U2FsdGVkX185lkgiHKonR1Bbq4m7w3ZJomQaS/mMEm92oSRtooKMgI7a6Q2QHAWjaF0YSYI9s5ATrFW/1Q8NaYQe1hwTbSWbJDYCum7kaL8IwHENZhzJNW1xeJVKjQ8p";
-                var sEncryUrl = "U2FsdGVkX198nmm0MZsUubz7JgKfZzu4rw5xVOQxHc1h8ArOCYzVahBb2SaSAZJHKnJNZkNjDKKyLVnrjZfC7rJ5wZ5tgH4WfJqtOLFFyyo9kEy+mH/lRUdEk9UL6Z9QwtB/JGCqtudffYda/jYC75ctyVUv0mlp6faoLcjqRm36QtAWuJgrrV99RbjSIvsGyMPzPJqfRYo2NQ2uPfMQ+wyrXlDxxBg1W0cLlLMIrn7mJWDjsqZHX3NsYJ8lSdr74Avzj+Ffd2mVwvFvDEvcgnjS4eWiNXwa3ZqXh6MI8eROugF9jE23/dgmewVx5hC/"
+                // how to generate sEncryUrl:
+                // GibberishAES.enc(STRING_PLAIN_TEXTURE, STRING_KEY);
+                var sEncryUrl = "U2FsdGVkX1/nREsYH3THLOvO8tiVM37FJq/7NFFrP1KtWNesmPEd52Se2rEEfSDvAv6jcJi0qtb1j4lg7MCHgDhEQqUmeSPKTAEJkhfZ+tvmv+PuJ11UcxtR6muSUiLI";
 
                 try {
                     var sUrl = GibberishAES.dec(sEncryUrl, $("#idTextName").val());
