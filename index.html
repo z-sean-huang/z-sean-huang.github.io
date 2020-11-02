@@ -198,14 +198,13 @@
             });
             */
             $("#idThesis").click(function () {
-                //window.open("https://www.dropbox.com/s/m60xwi8v7jzs8e1/%E5%9F%BA%E6%96%BCFPGA%E7%9A%84%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%A6%96%E8%A6%BA%E4%BC%BA%E6%9C%8D%E7%B3%BB%E7%B5%B1%E4%B9%8B%E8%A8%AD%E8%A8%88%E8%88%87%E5%AF%A6%E7%8F%BE.pdf", "resume");
                 $("#idModal").modal("show")
             });
 
             $("#idModalBtnOk").click(function () {
                 // how to generate sEncryUrl:
                 // GibberishAES.enc(STRING_PLAIN_TEXTURE, STRING_KEY);
-                var sEncryUrl = "U2FsdGVkX1/nREsYH3THLOvO8tiVM37FJq/7NFFrP1KtWNesmPEd52Se2rEEfSDvAv6jcJi0qtb1j4lg7MCHgDhEQqUmeSPKTAEJkhfZ+tvmv+PuJ11UcxtR6muSUiLI";
+                var sEncryUrl = "U2FsdGVkX19KS9qS5tB/SYOtPEHxFvm1ZUoh8w5uAEebPZqmoTycByQ17NLac3fW1I5k8FG7Kbgtuo0xIoENvkQYcnJ4kFRp1U7ZmBGFIzAnfrd5xgqaaae+F5lShkRm";
 
                 try {
                     var sUrl = GibberishAES.dec(sEncryUrl, $("#idTextName").val());
